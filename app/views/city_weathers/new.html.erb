@@ -1,0 +1,16 @@
+<div> Bienvenido <%= current_user.email %> </div>
+<%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+
+<h1>Consulta por IATA</h1>
+<%= form_with model: @city_weather do |form| %>
+  <%= render "devise/shared/error_messages", resource: @city_weather %>
+
+  <div>
+    <%= form.label :iata %><br>
+    <%= form.text_field :iata %>
+  </div>
+
+  <div>
+    <%= form.submit "Consultar" %>
+  </div>
+<% end %>
