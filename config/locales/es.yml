@@ -1,0 +1,70 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   "true": "foo"
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+es:
+  activerecord:
+    models:
+      user: 'Usuario'
+  errors:
+    format: '%{attribute}: %{message}'
+    messages:
+      extension_whitelist_error: Extensión no permitida
+      accepted: Debe ser aceptado
+      blank: No puede estar en blanco
+      present: Debe estar en blanco
+      confirmation: No coincide
+      empty: No puede estar vacío
+      equal_to: Debe ser igual a %{count}
+      even: Debe ser par
+      exclusion: Está reservado
+      greater_than: Debe ser mayor que %{count}
+      greater_than_or_equal_to: Debe ser mayor que o igual a %{count}
+      inclusion: No está incluido en la lista
+      invalid: No es válido
+      less_than: Debe ser menor que %{count}
+      less_than_or_equal_to: Debe ser menor que o igual a %{count}
+      model_invalid: 'La validación falló: %{errors}'
+      not_a_number: No es un número
+      not_an_integer: Debe ser un entero
+      odd: Debe ser impar
+      required: Debe existir
+      taken: Ya está en uso
+      too_long:
+        one: 'Es demasiado largo (1 carácter máximo)'
+        other: 'Es demasiado largo (%{count} caracteres máximo)'
+      too_short:
+        one: 'Es demasiado corto (1 carácter mínimo)'
+        other: 'Es demasiado corto (%{count} caracteres mínimo)'
+      wrong_length:
+        one: 'No tiene la longitud correcta (1 carácter exactos)'
+        other: 'No tiene la longitud correcta (%{count} caracteres exactos)'
+      other_than: Debe ser distinto de %{count}
+      mini_magick_processing_error: '%{e}' # <= e contains the exception.
