@@ -1,4 +1,17 @@
-<h1>IATA: <%= @city_weather.iata %></h1>
-<p><%= @city_weather.response %></p>
+<h1>
+  IATA: <%= @city_weather.iata %>
+  <img src="<%= @city_weather.response['current']['condition']['icon'] %>" alt="" />
+</h1>
+<% if @city_weather.response.present? %>
+  <ul>
+    <li>Ciudad: <%= @city_weather.response['location']['name'] %></li>
+    <li>Región: <%= @city_weather.response['location']['region'] %></li>
+    <li>País: <%= @city_weather.response['location']['country'] %></li>
+    <li>Latitud: <%= @city_weather.response['location']['lat'] %></li>
+    <li>Longitud: <%= @city_weather.response['location']['lon'] %></li>
+    <li>Temperatura: <%= @city_weather.response['current']['temp_c'] %> °C</li>
+    <li>Temperatura: <%= @city_weather.response['current']['temp_f'] %> °F</li>
+  </ul>
+<% end %>
 
 <%= link_to "Nueva consulta", :root %>
