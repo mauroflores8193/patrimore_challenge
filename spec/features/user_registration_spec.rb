@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'New user registration', type: :feature do
+RSpec.describe 'User registration', type: :feature do
   describe 'register' do
     before(:each) do
       visit new_user_registration_path
