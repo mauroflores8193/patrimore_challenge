@@ -1,24 +1,40 @@
-# README
+# Project Name: Patrimore Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Descripción
 
-Things you may want to cover:
+El presente proyecto es un reto técnico desarrollado para la empresa Patrimore. La aplicación solicita un código IATA y
+consume el servicio de [Weatherapi](https://www.weatherapi.com/) para mostrar la temperatura, coordenadas y otros datos
+de una ciudad.
 
-* Ruby version
+### Tecnologías
 
-* System dependencies
+* Ruby 3.1.2
+* Rails 7.0.3
+* SQLite3
+* Rspec
 
-* Configuration
+## Requisitos
 
-* Database creation
+La aplicaciión requiere tener instalado:
 
-* Database initialization
+- Ruby 3.1.2
+- Rails 7.0.3
+- SQLite3
 
-* How to run the test suite
+## Instalación y ejecución 🛠️
 
-* Services (job queues, cache servers, search engines, etc.)
+- Clonar el proyecto.
+- Ingresar a la carpeta del proyecto
+- Instalar las dependencias: `bundle install`
+- Ejecutar las migraciones: `rails db:migrate`
+- Ejecutar el servidor: `rails server`
 
-* Deployment instructions
+El serivicio por defecto corre en el puerto 3000
 
-* ...
+### Testing ⚙️
+
+Para los tests automáticos, se ejecuta el comando `rspec --format documentation`
+
+### Autores ✒️
+
+* **Autor:** Mauro Flores F., mauroflores8193@gmail.com
