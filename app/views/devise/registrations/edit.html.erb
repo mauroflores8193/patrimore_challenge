@@ -3,12 +3,12 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
+  <div class="field mb-3">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
+  <div class="field mb-3">
     <%= f.label :password %> <i>(deja en blanco si no quieres cambiarlo)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
@@ -17,18 +17,18 @@
     <% end %>
   </div>
 
-  <div class="field">
+  <div class="field mb-3">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
+  <div class="field mb-3">
     <%= f.label :current_password %> <i>(necesitamos tu password actual confirmar tus cambios)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Actualizar" %>
+  <div class="actions mb-2">
+    <%= f.submit "Actualizar", class: "btn btn-primary" %>
   </div>
 <% end %>
 

@@ -1,16 +1,18 @@
-<div> Bienvenido <%= current_user.email %> </div>
-<%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete %>
+<div class="d-flex justify-content-between align-items-center">
+  <div>Usuario: <%= current_user.email %> </div>
+  <%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: 'btn btn-link' %>
+</div>
 
 <h1>Consulta por IATA</h1>
 <%= form_with model: @city_weather do |form| %>
   <%= render "devise/shared/error_messages", resource: @city_weather %>
 
-  <div>
+  <div class="mb-3">
     <%= form.label :iata %><br>
     <%= form.text_field :iata %>
   </div>
 
   <div>
-    <%= form.submit "Consultar" %>
+    <%= form.submit "Consultar", class: "btn btn-primary" %>
   </div>
 <% end %>

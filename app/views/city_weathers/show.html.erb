@@ -5,12 +5,13 @@
 <% if @city_weather.response.present? %>
   <ul>
     <li>Ciudad: <%= @city_weather.response['location']['name'] %></li>
-    <li>Región: <%= @city_weather.response['location']['region'] %></li>
+    <% if @city_weather.response['location']['region'].present? %>
+      <li>Región: <%= @city_weather.response['location']['region'] %></li>
+    <% end %>
     <li>País: <%= @city_weather.response['location']['country'] %></li>
     <li>Latitud: <%= @city_weather.response['location']['lat'] %></li>
     <li>Longitud: <%= @city_weather.response['location']['lon'] %></li>
-    <li>Temperatura: <%= @city_weather.response['current']['temp_c'] %> °C</li>
-    <li>Temperatura: <%= @city_weather.response['current']['temp_f'] %> °F</li>
+    <li>Temperatura: <%= @city_weather.response['current']['temp_c'] %> °C / <%= @city_weather.response['current']['temp_f'] %> °F</li>
   </ul>
 <% end %>
 
